@@ -1,7 +1,7 @@
 
 [
 
-	{"keys": ["alt+up"], "command": "run_multiple_commands",
+	{"keys": ["ctrl+up"], "command": "run_multiple_commands",
 		"args": {
 			"commands":
 			[
@@ -10,10 +10,14 @@
 				{ "command": "move", "args": {"by": "lines", "forward": true} },
 				{ "command": "move_to", "args": {"to": "bol", "extend": false} }
 			],
-		}
+		},
+		"context":
+		[
+			{ "key": "selection_empty", "operator": "equal", "operand": true, "match_all": false }
+		]
 	},
 
-	{"keys": ["alt+down"], "command": "run_multiple_commands",
+	{"keys": ["ctrl+down"], "command": "run_multiple_commands",
 		"args": {
 			"commands":
 			[
@@ -21,7 +25,11 @@
 				{ "command": "move", "args": {"by": "lines", "forward": true} },
 				{ "command": "move_to", "args": {"to": "bol", "extend": false} }
 			],
-		}
+		},
+		"context":
+		[
+			{ "key": "selection_empty", "operator": "equal", "operand": true, "match_all": false }
+		]
 	},
 
 	{"keys": ["alt+shift+up"], "command": "run_multiple_commands",
