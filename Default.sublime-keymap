@@ -1,4 +1,3 @@
-
 [
 
 	{"keys": ["ctrl+up"], "command": "run_multiple_commands",
@@ -32,32 +31,32 @@
 		]
 	},
 
-	{"keys": ["alt+shift+up"], "command": "run_multiple_commands",
-		"args": {
-			"commands":
-			[
-				{ "command": "move", "args": {"extend": true, "by": "lines", "forward": false} },
-				{ "command": "move", "args": {"extend": true, "by": "stops", "empty_line": true, "forward": false} },
-				{ "command": "move", "args": {"extend": true, "by": "lines", "forward": true} },
-			],
-		}
-	},
+	// {"keys": ["alt+shift+up"], "command": "run_multiple_commands",
+	// 	"args": {
+	// 		"commands":
+	// 		[
+	// 			{ "command": "move", "args": {"extend": true, "by": "lines", "forward": false} },
+	// 			{ "command": "move", "args": {"extend": true, "by": "stops", "empty_line": true, "forward": false} },
+	// 			{ "command": "move", "args": {"extend": true, "by": "lines", "forward": true} },
+	// 		],
+	// 	}
+	// },
 
-	{"keys": ["alt+shift+down"], "command": "run_multiple_commands",
-		"args": {
-			"commands":
-			[
-				{ "command": "move", "args": {"extend": true, "by": "stops", "empty_line": true, "forward": true} },
-				{ "command": "move", "args": {"extend": true, "by": "lines", "forward": true} },
-			],
-		}
-	},
+	// {"keys": ["alt+shift+down"], "command": "run_multiple_commands",
+	// 	"args": {
+	// 		"commands":
+	// 		[
+	// 			{ "command": "move", "args": {"extend": true, "by": "stops", "empty_line": true, "forward": true} },
+	// 			{ "command": "move", "args": {"extend": true, "by": "lines", "forward": true} },
+	// 		],
+	// 	}
+	// },
 
-	{"keys": ["ctrl+keypad8"], "command": "run_multiple_commands",
+	{"keys": ["ctrl+keypad5"], "command": "run_multiple_commands",
 		"args": {
 			"commands":
 			[
-				{ "keys": ["up"], "command": "move", "args": {"by": "lines", "forward": false} },
+				// { "keys": ["up"], "command": "move", "args": {"by": "lines", "forward": false} },
 				{ "command": "scroll_lines", "args": {"amount": 1.0 } },
 			],
 		}
@@ -66,7 +65,7 @@
 		"args": {
 			"commands":
 			[
-				{ "keys": ["down"], "command": "move", "args": {"by": "lines", "forward": true} },
+				// { "keys": ["down"], "command": "move", "args": {"by": "lines", "forward": true} },
 				{ "command": "scroll_lines", "args": {"amount": -1.0 } },
 			],
 		}
