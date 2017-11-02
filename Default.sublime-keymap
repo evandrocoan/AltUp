@@ -53,4 +53,22 @@
 		}
 	},
 
+	{"keys": ["ctrl+keypad8"], "command": "run_multiple_commands",
+		"args": {
+			"commands":
+			[
+				{ "keys": ["up"], "command": "move", "args": {"by": "lines", "forward": false} },
+				{ "command": "scroll_lines", "args": {"amount": 1.0 } },
+			],
+		}
+	},
+	{"keys": ["ctrl+keypad2"], "command": "run_multiple_commands",
+		"args": {
+			"commands":
+			[
+				{ "keys": ["down"], "command": "move", "args": {"by": "lines", "forward": true} },
+				{ "command": "scroll_lines", "args": {"amount": -1.0 } },
+			],
+		}
+	},
 ]
