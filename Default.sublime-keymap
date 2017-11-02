@@ -71,4 +71,9 @@
 			],
 		}
 	},
+
+	// “subword” deletion
+	// https://forum.sublimetext.com/t/subword-deletion/2483
+	{ "keys": ["alt+backspace"], "command": "run_macro_file", "args": {"file": "Packages/AltUp/delete_subword.sublime-macro"} },
+	{ "keys": ["alt+delete"], "command": "run_macro_file", "args": {"file": "Packages/AltUp/delete_subword_forward.sublime-macro"} },
 ]
