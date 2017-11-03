@@ -11,9 +11,33 @@
 		},
 		"context":
 		[
-			{ "key": "selection_empty", "operator": "equal", "operand": true, "match_all": false }
+			{ "key": "selection_empty", "operator": "equal", "operand": true, "match_all": false },
+			{
+			    "key": "preceding_text",
+			    "operand": "\\s*",
+			    "operator": "regex_match"
+			}
 		]
 	},
+
+	{"keys": ["ctrl+up"], "command": "run_multiple_commands",
+		"args": {
+			"commands":
+			[
+				{ "command": "move", "args": {"by": "lines", "forward": false} },
+			],
+		},
+		"context":
+		[
+			{ "key": "selection_empty", "operator": "equal", "operand": true, "match_all": false },
+			{
+			    "key": "preceding_text",
+			    "operand": "\\s*",
+			    "operator": "not_regex_match"
+			}
+		]
+	},
+
 	{"keys": ["ctrl+down"], "command": "run_multiple_commands",
 		"args": {
 			"commands":
@@ -25,7 +49,30 @@
 		},
 		"context":
 		[
-			{ "key": "selection_empty", "operator": "equal", "operand": true, "match_all": false }
+			{ "key": "selection_empty", "operator": "equal", "operand": true, "match_all": false },
+			{
+			    "key": "preceding_text",
+			    "operand": "\\s*",
+			    "operator": "regex_match"
+			}
+		]
+	},
+
+	{"keys": ["ctrl+down"], "command": "run_multiple_commands",
+		"args": {
+			"commands":
+			[
+				{ "command": "move", "args": {"by": "lines", "forward": true} },
+			],
+		},
+		"context":
+		[
+			{ "key": "selection_empty", "operator": "equal", "operand": true, "match_all": false },
+			{
+			    "key": "preceding_text",
+			    "operand": "\\s*",
+			    "operator": "not_regex_match"
+			}
 		]
 	},
 
